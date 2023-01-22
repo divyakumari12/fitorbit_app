@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,16 +41,22 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text("App Bar"),
       ),
-      body: Center(
-        child: SafeArea(
-          child: Container(
-            height: 150,
-            width: 150,
-            color: Colors.redAccent,
-            child: Text("This is a container"),
-            )
-          ),
-      ),
+      body: SafeArea(
+        child: Container(
+          height: 150,
+          width: 150,
+          color: Colors.redAccent,
+          child: Text(
+            "This is a container",
+            style: TextStyle(
+              color: Colors.blue,
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.yellowAccent,
+            ),
+            ),
+          )
+        ),
       );
   }
 }
