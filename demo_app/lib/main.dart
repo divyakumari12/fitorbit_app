@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("App Bar"),
       ),
       body: SafeArea(
-        child: TextButton(
+        child: OutlinedButton(
             onPressed: () {
               print("Text Button Clicked");
             },
