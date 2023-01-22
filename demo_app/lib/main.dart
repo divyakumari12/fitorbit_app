@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
@@ -24,17 +23,15 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}):super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -42,21 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("App Bar"),
       ),
       body: SafeArea(
-        child: Container(
-          height: 150,
-          width: 150,
-          color: Colors.redAccent,
-          child: Text(
-            "This is a container",
-            style: TextStyle(
-              color: Colors.blue,
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              backgroundColor: Colors.yellowAccent,
-            ),
-            ),
-          )
-        ),
-      );
+        child: TextButton(
+            onPressed: () {
+              print("Text Button Clicked");
+            },
+            onLongPress: () {
+              print("Button LongPresses");
+            },
+            child: Text("Text Button")),
+      ),
+    );
   }
 }
