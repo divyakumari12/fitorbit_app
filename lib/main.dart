@@ -1,4 +1,6 @@
+import 'package:fitorbit_app/Pages/login_page.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -9,12 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Column(
-        children: [
-          Image.asset("assets/logo.png"),
-        ],
-      )
+    return MaterialApp(
+      
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      home: const TabBarDemo(),
     );
   }
 }
