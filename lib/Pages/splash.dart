@@ -1,3 +1,4 @@
+import 'package:fitorbit_app/Pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -5,22 +6,34 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        body: Center(
+    var elevatedButton = ElevatedButton(
+          onPressed: () {
+            Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => LoginPage()));
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black,
+          ),
           child: Column(
             children: <Widget>[
               Image.asset(
-                'images/logo.png',
+                'assets/logo.png',
                 height: 400,
                 width: 400,
               ), // Image.asset
             ], //<Widget>[]
           ), //Column
-        ), //Center
+        );
+    return 
+      
+        Scaffold(
+      body: Center(
+        child: elevatedButton, //Center
+        
       ),
     );
+
+    
   }
 }
-  

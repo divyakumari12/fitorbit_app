@@ -1,4 +1,5 @@
 
+import 'package:fitorbit_app/Pages/splash.dart';
 import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
 
@@ -11,9 +12,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return MaterialApp(
+      themeMode: ThemeMode.dark,
+      theme: ThemeData(
+      //primarySwatch: Colors.black,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.light,
+      ),
+      
       debugShowCheckedModeBanner: false,
-      home:LoginPage(),
+      home:const SplashScreen(),
     );
   }
 }
