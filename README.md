@@ -1,4 +1,4 @@
-# fitorbit_app
+# fitorbit
 
 A new Flutter project.
 
